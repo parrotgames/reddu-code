@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddu Code</title>
+    <link rel="shortcut icon" href="images/RedduCode-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.0/split.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/xml-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/css-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/javascript-hint.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.css">
+</head>
+
+<body>
+    <div class="navbar" role="navigation">
+        <div class="logo">
+            <img src="images/RedduCode-logo.png" alt="Reddu Code Logo">
+            <span>Reddu Code</span>
+        </div>
+        <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="https://parrotgames.github.io" target="_blank">More Websites</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="buttons-container">
+            <button onclick="showEditor('html-editor')">HTML</button>
+            <button onclick="showEditor('css-editor')">CSS</button>
+            <button onclick="showEditor('js-editor')">JavaScript</button>
+        </div>
+        <div class="top-bottom-container">
+            <div class="left">
+                <div class="editors">
+                    <div class="editor-section" id="html-editor" role="tabpanel" aria-labelledby="html-tab">
+                        <label>
+                            <i class="fab fa-html5" style="color: #ff3c41;"></i>HTML
+                        </label>
+                        <textarea id="html-code"></textarea>
+                    </div>
+                    <div class="editor-section" id="css-editor" role="tabpanel" aria-labelledby="css-tab">
+                        <label>
+                            <i class="fab fa-css3" style="color: #0ebeff;"></i>CSS
+                        </label>
+                        <textarea id="css-code"></textarea>
+                    </div>
+                    <div class="editor-section" id="js-editor" role="tabpanel" aria-labelledby="js-tab">
+                        <label>
+                            <i class="fab fa-js" style="color: #fcd000;"></i>JavaScript
+                        </label>
+                        <textarea id="js-code"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="output-section">
+                    <label>
+                        <i class="fas fa-play"></i>Output
+                    </label>
+                    <iframe class="output" id="output"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="editor.js"></script>
+</body>
+
+</html>
